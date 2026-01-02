@@ -3,3 +3,7 @@ halaman home
 
 halaman entry data
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/99b453cf-1e33-4d82-8f63-dc0d034dceac" />
+
+data
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/31252202-5af7-4c46-be22-0e054e4982f4" />
+
