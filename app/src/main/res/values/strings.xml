@@ -24,4 +24,5 @@
     <string name="deskripsi_no_item">
         Tidak ada data Siswa. Tap + untuk menambah data
     </string>
+    <string name="connection_error">Tidak dapat terhubung ke jaringan.</string>
 </resources>
