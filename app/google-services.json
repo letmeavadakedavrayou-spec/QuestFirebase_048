@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:182833056224:android:d3486261b1db3755f68385",
+        "mobilesdk_app_id": "1:182833056224:android:9ea37c55672e6470f68385",
         "android_client_info": {
-          "package_name": "com.example.siswa"
+          "package_name": "com.example.myfirebase"
         }
       },
       "oauth_client": [],
