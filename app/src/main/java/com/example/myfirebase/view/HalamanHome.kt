@@ -77,7 +77,6 @@ fun HomeScreen(
             statusUiSiswa = viewModel.statusUiSiswa,
             retryAction = { viewModel.loadSiswa() },
             modifier = Modifier.padding(innerPadding),
-            // ✅ PASS PARAMETER INI KE HomeStatus
             onDetailClick = onDetailClick
         )
     }
