@@ -74,10 +74,11 @@ fun HomeScreen(
         },
     ) { innerPadding ->
         HomeStatus(
-            statusUiSiswa = viewModel.statusUiSiswa, // Sudah diperbaiki
-            retryAction = { viewModel.loadSiswa() }, // Sudah diperbaiki jadi loadSiswa
+            statusUiSiswa = viewModel.statusUiSiswa,
+            retryAction = { viewModel.loadSiswa() },
             modifier = Modifier.padding(innerPadding),
-            onDetailClick = onDetailClick,
+            // ✅ PASS PARAMETER INI KE HomeStatus
+            onDetailClick = onDetailClick
         )
     }
 }
@@ -94,13 +95,14 @@ fun HomeStatus(
         is StatusUiSiswa.Success -> ListSiswa(
             siswaList = statusUiSiswa.siswa,
             modifier = modifier.fillMaxWidth(),
-            onClick = { onDetailClick(it.id.toString()) } // Sudah diperbaiki (Long ke String)
+            onClick = { siswa ->
+                onDetailClick(siswa.id.toString())
+            }
         )
         is StatusUiSiswa.Error -> OnError(retryAction, modifier = modifier.fillMaxSize())
     }
 }
 
-/* Komponen Loading dan Error yang sebelumnya hilang, saya buatkan di sini */
 @Composable
 fun OnLoading(modifier: Modifier = Modifier) {
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
