@@ -31,24 +31,21 @@ android {
         }
     }
 
-    // ✅ HAPUS DUPLIKAT buildFeatures
     buildFeatures {
         compose = true
     }
 
-    // ✅ TAMBAHKAN composeOptions dengan versi yang kompatibel
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.11" // Untuk Kotlin 1.9.22
+        kotlinCompilerExtensionVersion = "1.5.11"
     }
 
     compileOptions {
-        // ✅ KEMBALIKAN KE VERSION_1_8 (bukan 11)
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-        jvmTarget = "1.8" // ✅ KEMBALIKAN KE 1.8 (bukan 11)
+        jvmTarget = "1.8"
     }
 
     packaging {
@@ -63,17 +60,13 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.activity:activity-compose:1.8.2")
 
-    // ✅ UPDATE COMPOSE BOM KE VERSI YANG LEBIH BARU
-    implementation(platform("androidx.compose:compose-bom:2024.02.00")) // Versi terbaru
+    implementation(platform("androidx.compose:compose-bom:2024.02.00"))
 
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
 
-    // Icons (opsional, bisa ditambahkan jika perlu)
-    // implementation("androidx.compose.material:material-icons-core")
-    // implementation("androidx.compose.material:material-icons-extended")
 
     // Navigation Compose
     implementation("androidx.navigation:navigation-compose:2.7.7")
