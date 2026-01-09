@@ -38,7 +38,6 @@ fun EditSiswaScreen(
     modifier: Modifier = Modifier,
     viewModel: EditViewModel = viewModel(factory = PenyediaViewModel.Factory)
 ) {
-    // ✅ AMBIL STATE DENGAN collectAsState()
     val uiState by viewModel.uiStateSiswa.collectAsState()
 
     val coroutineScope = rememberCoroutineScope()
@@ -115,7 +114,7 @@ fun EditSiswaScreen(
                         navigateBack()
                     }
                 },
-                enabled = uiState.isEntryValid, // ✅ GUNAKAN uiState
+                enabled = uiState.isEntryValid,
                 shape = MaterialTheme.shapes.small,
                 modifier = Modifier.fillMaxWidth()
             ) {
