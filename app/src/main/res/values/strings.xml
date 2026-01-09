@@ -24,5 +24,8 @@
     <string name="deskripsi_no_item">
         Tidak ada data Siswa. Tap + untuk menambah data
     </string>
-    <string name="connection_error">Tidak dapat terhubung ke jaringan.</string>
+    <string name="confirm_delete">Apakah Anda yakin ingin menghapus data ini?</string>
+
+    <string name="connection_error">Koneksi error</string>
+
 </resources>
