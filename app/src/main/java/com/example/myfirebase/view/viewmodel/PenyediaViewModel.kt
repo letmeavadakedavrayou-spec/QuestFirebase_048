@@ -11,12 +11,7 @@ fun CreationExtras.aplikasiDataSiswa(): AplikasiDataSiswa =
     (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as AplikasiDataSiswa)
 
 object PenyediaViewModel {
-    fun provideEditViewModel(savedStateHandle: androidx.lifecycle.SavedStateHandle): EditViewModel {
-        return EditViewModel(
-            savedStateHandle = savedStateHandle,
-            repositorySiswa = AplikasiDataSiswa().container.repositorySiswa
-        )
-    }
+
     val Factory = viewModelFactory {
         initializer { HomeViewModel(aplikasiDataSiswa().container.repositorySiswa) }
         initializer { EntryViewModel(aplikasiDataSiswa().container.repositorySiswa) }
